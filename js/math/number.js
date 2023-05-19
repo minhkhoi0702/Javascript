@@ -1,8 +1,8 @@
 // string to num
-const stringToNumber = "7.2"
-console.log(Number(stringToNumber))
-console.log(parseInt(stringToNumber));
-console.log(parseFloat(stringToNumber));
+const stringToNumber = "-7.2"
+console.log(Number(stringToNumber)) //7.2
+console.log(parseInt(stringToNumber)); //7
+console.log(parseFloat(stringToNumber));//7.2
 
 const num = 7.56565656
 // take the absolute value
