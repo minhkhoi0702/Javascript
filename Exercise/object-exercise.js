@@ -38,4 +38,19 @@ function without(object,...key) {
     
     return newObject
 }
-console.log(without({a: 1, b: 2}, "a","b"))
+// console.log(without({a: 1, b: 2}, "a","b"))
+
+// 4. {a: 1, b: 2}, {a: 1, b: 2} => true
+// {a: 1, b: 2}, {a: 1, b: 2, c:3} => false
+function isEqualObject(obj1,obj2){
+  // check key lenght of two objects
+  const objKey1 = Object.keys(obj1);
+  const objKey2 = Object.keys(obj2);
+  if(objKey1.length !== objKey2.length) return false;
+  // check values of two object
+  const result = objKey1.every((key) => { return obj1[key] === obj2[key]})
+  return result
+  
+  
+}
+console.log(isEqualObject({a: 1, b: 2}, {a: 1, b: 2}))
